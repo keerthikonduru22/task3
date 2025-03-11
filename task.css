@@ -1,0 +1,223 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e2f;
+    /* Dark background */
+    color: #e0e0e0;
+    /* Light text */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+input[type="radio"].checked {
+    color: #4CAF50;
+    /* Green color for selected option */
+    font-weight: bold;
+}
+
+/* Style for the radio button label */
+label {
+    color: #000;
+    /* Default color for unselected options */
+}
+
+h1 {
+    color: #ff6f61;
+    /* Coral accent color */
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Quiz Container */
+#quiz {
+    background-color: #2a2a40;
+    /* Darker container */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* Question Styles */
+.question {
+    margin-bottom: 25px;
+}
+
+.question p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+    /* White for question text */
+}
+
+/* Option Styles */
+label {
+    display: block;
+    margin: 12px 0;
+    padding: 12px;
+    background-color: #3a3a5a;
+    /* Dark option background */
+    border: 2px solid #4a4a6a;
+    /* Slightly lighter border */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #e0e0e0;
+    /* Light text */
+}
+
+label:hover {
+    background-color: #4a4a6a;
+    /* Hover effect */
+    border-color: #5a5a7a;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #ff6f61;
+    /* Coral accent for radio buttons */
+}
+
+/* Disabled Option Styles */
+input[type="radio"].disabled+span {
+    color: #747070;
+    /* Grayed out text */
+    cursor: not-allowed;
+}
+
+/* Button Styles */
+button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff6f61;
+    /* Coral accent */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 8px;
+}
+
+
+button:hover {
+    background-color: #ff4a3d;
+    /* Darker coral on hover */
+}
+
+button:disabled {
+    background-color: #6a6a8a;
+    /* Grayed out for disabled buttons */
+    cursor: not-allowed;
+}
+
+/* Navigation Buttons */
+#navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* Result Styles */
+#result {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #4caf50;
+    /* Green for correct answers */
+    font-weight: 600;
+    text-align: center;
+}
+
+#result p {
+    margin: 5px 0;
+}
+#result.error{
+    color: red;
+}
+#result.correct{
+    color: green;
+}
+#result.wrong{
+    color: red;
+}
+#result.lastone{
+    color: orange;
+}
+/* Weather Button */
+#weatherbtm {
+    background-color: #4caf50;
+    /* Green for weather button */
+}
+
+#weatherbtm:hover {
+    background-color: #45a049;
+    /* Darker green on hover */
+}
+.selected-option {
+    color: #3c953c;
+    /* Green color for selected option */
+    font-weight: bold;
+}
+
+/* Custom style for the radio button */
+.selected-option input[type="radio"] {
+    accent-color: red;
+    margin-right: 10px;
+    /* This will work in some browsers */
+}
+.correct-answer {
+    color: #4CAF50;
+    /* Green color for correct answer */
+    font-weight: bold;
+
+}
+
+/* Incorrect answer styling */
+.incorrect-answer {
+    color: #FF0000;
+    /* Red color for incorrect answer */
+    font-weight: bold;
+}
+
+/* Fallback for browsers that do not support accent-color */
+.selected-option input[type="radio"] {
+    filter: hue-rotate(120deg);
+    /* Adjust the hue to change the color */
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    body {
+        padding-top: 10px;
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #quiz {
+        padding: 20px;
+    }
+
+    .question p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
